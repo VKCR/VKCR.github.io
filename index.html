@@ -22,6 +22,24 @@
 		</p>
 	    </article>
 	    <article>
+		<h2>Redux DAG</h2>
+		<div class="img-container">
+		    <a href="https://github.com/vkcr/redux-dag">
+			<img src="media/dag.png" alt="Directed Acyclic Graph">
+		    </a>
+		</div>
+		<p>Redux DAG allows you to model and enforce dependencies between different values of your state, such that updating one of those values automatically updates all other values which depend on it.</p>
+
+		<p>Each value is stored in a node. Nodes can depend on other nodes' values, thus forming a dependency graph, which by construction is a DAG. Each node must specify an update function which takes as input the values of the nodes it depends upon, and returns a value, which becomes that node's value. The use of an arbitrary update function allows for modelling complex relationships.</p>
+
+		<p>Then, when a value's node is updated, it triggers a cascade of updates, first in the nodes which immediately depend on it, then on the nodes which depend on those previous nodes, so on and so forth, until the update is fully propagated and all values are in a consistent state.</p>
+		<p>You can find out more information at the
+		    <a href="https://github.com/vkcr/redux-dag">
+			Redux DAG GitHub repo
+		    </a>
+		</p>
+	    </article>
+	    <article>
 		<h2>Facebook messages browser</h2>
 		<div class="img-container">
 		    <a href="https://github.com/vkcr/fbmessagesbrowser">
